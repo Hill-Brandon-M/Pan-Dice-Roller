@@ -1,5 +1,5 @@
 # Pan-Dice Roller
-This application is a simple, console-based dice-roller made for Windows.
+This application is a simple, console-based dice-roller made for Windows. It can make any number of dice rolls on a simulated dice of any number of sides.
 
 ## Getting Started
 
@@ -40,4 +40,4 @@ Dice rolls can then be run until the ```exit``` command is entered, at which poi
 * **Brandon Hill** - [Hill-Brandon-M](https://github.com/Hill-Brandon-M)
 
 ## License
-This project is licensed under the [Unlicense](http://unlicense.org/). (see the [LICENSE](LICENSE) for more details)
+This project is licensed under [The Unlicense](http://unlicense.org/). (see the [LICENSE](LICENSE) for more details)

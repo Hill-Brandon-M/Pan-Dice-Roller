@@ -25,12 +25,15 @@ make
 If setup was successful, executing the program will result in the following prompt.
 
 ```
-Welcome to the Dice Random Number Generator!
-For t dice rolls for an n-sided die, please enter a command in the follwing format: <t>d<n>
-Otherwise, enter "exit" to close the program.
+panRoller>
 ```
 
-Dice rolls can then be run until the ```exit``` command is entered, at which point the program will terminate.
+Commands can then be issued to the application.
+
+### Commands
+* ```<t>d<n>``` - **Dice Roll** - Rolls a n-sided die t times.
+* ```exit``` - **Exit** - Terminates the program.
+* ```help``` - **Help** - Prints a list of commands.
 
 ## Built With
 * [MinGW](http://www.mingw.org/) - Compiler/Linker

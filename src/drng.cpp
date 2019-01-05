@@ -8,31 +8,57 @@
 
 using namespace std;
 
+void inline printHelp () {
+	cout <<
+		"Help:" << endl << endl <<
+		"\t" 	<< "Commands: " << endl <<
+		"\t\t" 	<< "<t>d<n> - Generates t rolls on an n-sided die." << endl <<
+		"\t\t" 	<< "help - Prints list of commands." << endl <<
+		"\t\t" 	<< "exit - Closes the program." << endl << endl;
+}
+
 int main(int argc, char** argv) {
 
 	if (argc > 1) {
+
 		for (int i = 1; i < argc; i++) {
 			string command = string(argv[i]);
-			die d = die(command);
-			d.roll();
+
+			if (command[0] == '-') {
+
+				if (command[1] == 'h') {
+					printHelp();
+				}
+
+			} else {
+				die d = die(command);
+				d.roll();
+			}
 		}
-		return 0;
 	}
 
-
-	cout <<
-		"Welcome to the Dice Random Number Generator!" << endl <<
-		"For t dice rolls for an n-sided die, please enter a command in the follwing format: <t>d<n>" << endl <<
-		"Otherwise, enter \"exit\" to close the program." << endl << endl;
-
-	string c = "0";
+	string c = "";
 	while (c != "exit") {
-		if (c != "0") {
+
+		// Get user input
+		cout << "panRoller> ";
+		cin >> c;
+
+		// Handle commands
+		if (c[0] >= '0' && c[0] <= '9') { // Roll dice
 			die d = die(c);
 			d.roll();
+
+		} else if (c[0] == 'h') { // Get help
+			printHelp();
+
+		} else if (c[0] == 'e') { // Exit program
+			c = "exit";
+
+		} else {
+			cout << "Command not recognized. Enter 'help' to see a list of commands." << endl;
 		}
 
-		cin >> c;
 	}
 
     return 0;

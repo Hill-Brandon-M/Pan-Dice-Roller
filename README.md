@@ -1,5 +1,5 @@
 # Pan-Dice Roller
-This application is a simple, console-based dice-roller made for Windows. It can make any number of dice rolls on a simulated dice of any number of sides.
+This application is a simple, console-based dice-roller made for console. It can make any number of dice rolls on a simulated dice of any number of sides.
 
 ## Getting Started
 
